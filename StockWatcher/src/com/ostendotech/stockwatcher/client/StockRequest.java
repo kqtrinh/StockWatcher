@@ -2,6 +2,7 @@ package com.ostendotech.stockwatcher.client;
 
 import com.google.gwt.user.client.rpc.IsSerializable;
 
+// this is the stock price class that is sent from the client to the server for quote request thru serialization
 public class StockRequest implements IsSerializable {	  
 	private String symbol;
 	private int flexTableRowNum;
