@@ -1,0 +1,13 @@
+com.google.gwt.user.client.rpc.IncompatibleRemoteServiceException, true, true, true, true, com.google.gwt.user.client.rpc.IncompatibleRemoteServiceException/3936916533, 3936916533
+com.google.gwt.user.client.rpc.RpcTokenException, true, true, false, false, com.google.gwt.user.client.rpc.RpcTokenException/2345075298, 2345075298
+com.google.gwt.user.client.rpc.XsrfToken, false, false, true, true, com.google.gwt.user.client.rpc.XsrfToken/4254043109, 4254043109
+com.ostendotech.stockwatcher.client.DelistedException, true, true, false, false, com.ostendotech.stockwatcher.client.DelistedException/95262542, 95262542
+com.ostendotech.stockwatcher.client.StockPrice, true, true, false, false, com.ostendotech.stockwatcher.client.StockPrice/4274577197, 4274577197
+[Lcom.ostendotech.stockwatcher.client.StockPrice;, true, true, false, false, [Lcom.ostendotech.stockwatcher.client.StockPrice;/149876774, 149876774
+com.ostendotech.stockwatcher.client.StockRequest, true, true, true, true, com.ostendotech.stockwatcher.client.StockRequest/1353037504, 1353037504
+com.ostendotech.stockwatcher.client.service.StockPriceService, false, false, false, false, _, 4230598554
+java.lang.Exception, true, false, true, false, java.lang.Exception/1920171873, 1920171873
+java.lang.RuntimeException, true, false, true, false, java.lang.RuntimeException/515124647, 515124647
+java.lang.String, true, true, true, true, java.lang.String/2004016611, 2004016611
+java.lang.Throwable, true, false, true, false, java.lang.Throwable/2953622131, 2953622131
+java.util.ArrayList, false, false, true, true, java.util.ArrayList/4159755760, 4159755760

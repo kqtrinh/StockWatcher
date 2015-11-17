@@ -1,0 +1,590 @@
+#
+# A fatal error has been detected by the Java Runtime Environment:
+#
+#  EXCEPTION_ACCESS_VIOLATION (0xc0000005) at pc=0x000000006459b7c6, pid=9112, tid=5240
+#
+# JRE version: Java(TM) SE Runtime Environment (7.0_60-b19) (build 1.7.0_60-b19)
+# Java VM: Java HotSpot(TM) 64-Bit Server VM (24.60-b09 mixed mode windows-amd64 compressed oops)
+# Problematic frame:
+# V  [jvm.dll+0x1eb7c6]
+#
+# Failed to write core dump. Minidumps are not enabled by default on client versions of Windows
+#
+# If you would like to submit a bug report, please visit:
+#   http://bugreport.sun.com/bugreport/crash.jsp
+#
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x000000000f7c3000):  VMThread [stack: 0x00000000108a0000,0x00000000109a0000] [id=5240]
+
+siginfo: ExceptionCode=0xc0000005, reading address 0x000000000000000a
+
+Registers:
+RAX=0x0000000000000000, RBX=0x000000001099f040, RCX=0x000000001099f040, RDX=0x0000000000000028
+RSP=0x000000001099ed70, RBP=0x0000000000000000, RSI=0x0000000000000000, RDI=0x000000001099f6c0
+R8 =0x0000000000000000, R9 =0x0000000000000000, R10=0x00000006fc060910, R11=0x0000000064931898
+R12=0x0000000000000000, R13=0x000000000f7c3001, R14=0x0000000000000000, R15=0x6666666666666667
+RIP=0x000000006459b7c6, EFLAGS=0x0000000000010206
+
+Top of Stack: (sp=0x000000001099ed70)
+0x000000001099ed70:   00000006fbb95fa0 00000007abd2d940
+0x000000001099ed80:   00000006fbef8890 00000007abb40588
+0x000000001099ed90:   00000006fbdea780 00000007ab7296a8
+0x000000001099eda0:   00000006fbd2d3e0 00000006fbd2d888
+0x000000001099edb0:   00000007ab7298e8 00000006fbd2d888
+0x000000001099edc0:   00000007ab679df8 00000006fbbc0668
+0x000000001099edd0:   00000007ab73e5d8 00000006fbd5afd0
+0x000000001099ede0:   00000007aae10278 00000006fb9450f0
+0x000000001099edf0:   00000006fb945958 00000007aae103e0
+0x000000001099ee00:   00000006fb945958 00000007aae6f190
+0x000000001099ee10:   00000006fba23b40 00000007ab6c1990
+0x000000001099ee20:   00000006fbc2a5c0 00000007ab4e3a80
+0x000000001099ee30:   00000006fbb59ac8 00000007ab1e9b60
+0x000000001099ee40:   00000006fbabb5e0 00000007aae3f9e0
+0x000000001099ee50:   00000006fba056f8 00000006fba0b808
+0x000000001099ee60:   00000007aae45668 00000006fba0b808 
+
+Instructions: (pc=0x000000006459b7c6)
+0x000000006459b7a6:   01 00 00 48 8b 05 70 a4 54 00 48 33 c4 48 89 84
+0x000000006459b7b6:   24 30 01 00 00 4c 63 41 10 48 8b 41 08 48 8b d9
+0x000000006459b7c6:   42 38 54 00 0a 74 33 44 0f be c2 48 8d 4c 24 20
+0x000000006459b7d6:   48 8d 15 13 bb 3a 00 e8 be 21 e3 ff 48 8d 0d a7 
+
+
+Register to memory mapping:
+
+RAX=0x0000000000000000 is an unknown value
+RBX=0x000000001099f040 is an unknown value
+RCX=0x000000001099f040 is an unknown value
+RDX=0x0000000000000028 is an unknown value
+RSP=0x000000001099ed70 is an unknown value
+RBP=0x0000000000000000 is an unknown value
+RSI=0x0000000000000000 is an unknown value
+RDI=0x000000001099f6c0 is an unknown value
+R8 =0x0000000000000000 is an unknown value
+R9 =0x0000000000000000 is an unknown value
+R10=0x00000006fc060910 is an oop
+{constant pool} 
+ - klass: {other class}
+ - holder: 0x00000006fba6b6f0
+ - cache: 0x00000006fc0614b0
+ -   1 :  : 'com/ostendotech/stockwatcher/server/HttpURL'
+ -   2 :  : 'com/ostendotech/stockwatcher/server/HttpURL'
+ -   3 :  : 'java/lang/Object'
+ -   4 :  : 'java/lang/Object'
+ -   5 :  : 'USER_AGENT'
+ -   6 :  : 'Ljava/lang/String;'
+ -   7 :  : 'ConstantValue'
+ -   8 :  : "Mozilla/5.0" {0xac7cdc40}
+ -   9 :  : 'Mozilla/5.0'
+ -  10 :  : '<init>'
+ -  11 :  : '()V'
+ -  12 :  : 'Code'
+ -  13 :  : klass_index=3 name_and_type_index=14
+ -  14 :  : name_index=10 signature_index=11
+ -  15 :  : klass_index=1 name_and_type_index=16
+ -  16 :  : name_index=5 signature_index=6
+ -  17 :  : 'LineNumberTable'
+ -  18 :  : 'LocalVariableTable'
+ -  19 :  : 'this'
+ -  20 :  : 'Lcom/ostendotech/stockwatcher/server/HttpURL;'
+ -  21 :  : 'main'
+ -  22 :  : '([Ljava/lang/String;)V'
+ -  23 :  : 'Exceptions'
+ -  24 :  : 'java/lang/Exception'
+ -  25 :  : 'java/lang/Exception'
+ -  26 :  : 'java/io/File'
+ -  27 :  : 'java/io/File'
+ -  28 :  : "quote.xml" {0xaaf48688}
+ -  29 :  : 'quote.xml'
+ -  30 :  : klass_index=26 name_and_type_index=31
+ -  31 :  : name_index=10 signature_index=32
+ -  32 :  : '(Ljava/lang/String;)V'
+ -  33 :  : "MSFT" {0xaaf486c8}
+ -  34 :  : 'MSFT'
+ -  35 :  : klass_index=1 name_and_type_index=36
+ -  36 :  : name_index=37 signature_index=38
+ -  37 :  : 'parseSymbolPrice'
+ -  38 :  : '(Ljava/lang/String;Ljava/io/File;)Lcom/ostendotech/stockwatcher/client/StockPrice;'
+ -  39 :  : klass_index=1 name_and_type_index=14
+ -  40 :  : klass_index=41 name_and_type_index=43
+ -  41 :  : 'java/lang/System'
+ -  42 :  : 'java/lang/System'
+ -  43 :  : name_index=44 signature_index=45
+ -  44 :  : 'out'
+ -  45 :  : 'Ljava/io/PrintStream;'
+ -  46 :  : "Testing 1 - Send Http GET request" {0xac7cdc80}
+ -  47 :  : 'Testing 1 - Send Http GET request'
+ -  48 :  : klass_index=49 name_and_type_index=51
+ -  49 :  : 'java/io/PrintStream'
+ -  50 :  : 'java/io/PrintStream'
+ -  51 :  : name_index=52 signature_index=32
+ -  52 :  : 'println'
+ -  53 :  : "https://query.yahooapis.com/v1/public/yql?q=SELECT%20*%20FROM%20yahoo.finance.quote%20WHERE%20symbol%3D%22msft%2Cyhoo%2Cgoog%22&env=store%3A%2F%2Fdatatables.org%2Falltableswithkeys" {0xac7cdcf0}
+ -  54 :  : 'https://query.yahooapis.com/v1/public/yql?q=SELECT%20*%20FROM%20yahoo.finance.quote%20WHERE%20symbol%3D%22msft%2Cyhoo%2Cgoog%22&env=store%3A%2F%2Fdatatables.org%2Falltableswithkeys'
+ -  55 :  : klass_index=1 name_and_type_index=56
+ -  56 :  : name_index=57 signature_index=58
+ -  57 :  : 'sendGet'
+ -  58 :  : '(Ljava/lang/String;)Ljava/lang/String;'
+ -  59 :  : 'args'
+ -  60 :  : '[Ljava/lang/String;'
+ -  61 :  : 'xmlFile'
+ -  62 :  : 'Ljava/io/File;'
+ -  63 :  : 'http'
+ -  64 :  : 'url'
+ -  65 :  : 'nu/xom/Builder'
+ -  66 :  : 'nu/xom/Builder'
+ -  67 :  : klass_index=65 name_and_type_index=14
+ -  68 :  : "https://query.yahooapis.com/v1/public/yql?q=SELECT%20*%20FROM%20yahoo.finance.quote%20WHERE%20symbol%3D%22MSFT%22&env=store%3A%2F%2Fdatatables.org%2Falltableswithkeys" {0xab654ab8}
+ -  69 :  : 'https://query.yahooapis.com/v1/public/yql?q=SELECT%20*%20FROM%20yahoo.finance.quote%20WHERE%20symbol%3D%22MSFT%22&env=store%3A%2F%2Fdatatables.org%2Falltableswithkeys'
+ -  70 :  : klass_index=65 name_and_type_index=71
+ -  71 :  : name_index=72 signature_index=73
+ -  72 :  : 'build'
+ -  73 :  : '(Ljava/lang/String;)Lnu/xom/Document;'
+ -  74 :  : klass_index=75 name_and_type_index=77
+ -  75 :  : 'nu/xom/Document'
+ -  76 :  : 'nu/xom/Document'
+ -  77 :  : name_index=78 signature_index=79
+ -  78 :  : 'getRootElement'
+ -  79 :  : '()Lnu/xom/Element;'
+ -  80 :  : 'java/lang/StringBuilder'
+ -  81 :  : 'java/lang/StringBuilder'
+ -  82 :  : "Root Node : " {0xac4a4ef0}
+ -  83 :  : 'Root Node : '
+ -  84 :  : klass_index=80 name_and_type_index=31
+ -  85 :  : klass_index=86 name_and_type_index=88
+ -  86 :  : 'nu/xom/Element'
+ -  87 :  : 'nu/xom/Element'
+ -  88 :  : name_index=89 signature_index=90
+ -  89 :  : 'getLocalName'
+ -  90 :  : '()Ljava/lang/String;'
+ -  91 :  : klass_index=80 name_and_type_index=92
+ -  92 :  : name_index=93 signature_index=94
+ -  93 :  : 'append'
+ -  94 :  : '(Ljava/lang/String;)Ljava/lang/StringBuilder;'
+ -  95 :  : klass_index=80 name_and_type_index=96
+ -  96 :  : name_index=97 signature_index=90
+ -  97 :  : 'toString'
+ -  98 :  : klass_index=86 name_and_type_index=99
+ -  99 :  : name_index=100 signature_index=101
+ - 100 :  : 'getChildElements'
+ - 101 :  : '()Lnu/xom/Elements;'
+ - 102 :  : klass_index=103 name_and_type_index=105
+ - 103 :  : 'nu/xom/Elements'
+ - 104 :  : 'nu/xom/Elements'
+ - 105 :  : name_index=106 signature_index=107
+ - 106 :  : 'get'
+ - 107 :  : '(I)Lnu/xom/Element;'
+ - 108 :  : "quote" {0xac49e2c0}
+ - 109 :  : 'quote'
+ - 110 :  : klass_index=86 name_and_type_index=111
+ - 111 :  : name_index=112 signature_index=113
+ - 112 :  : 'getFirstChildElement'
+ - 113 :  : '(Ljava/lang/String;)Lnu/xom/Element;'
+ - 114 :  : "symbol" {0xac49e330}
+ - 115 :  : 'symbol'
+ - 116 :  : klass_index=86 name_and_type_index=117
+ - 117 :  : name_index=118 signature_index=58
+ - 118 :  : 'getAttributeValue'
+ - 119 :  : klass_index=86 name_and_type_index=120
+ - 120 :  : name_index=121 signature_index=122
+ - 121 :  : 'getChildCount'
+ - 122 :  : '()I'
+ - 123 :  : klass_index=124 name_and_type_index=126
+ - 124 :  : 'java/lang/String'
+ - 125 :  : 'java/lang/String'
+ - 126 :  : name_index=127 signature_index=128
+ - 127 :  : 'contains'
+ - 128 :  : '(Ljava/lang/CharSequence;)Z'
+ - 129 :  : klass_index=86 name_and_type_index=130
+ - 130 :  : name_index=131 signature_index=132
+ - 131 :  : 'getChild'
+ - 132 :  : '(I)Lnu/xom/Node;'
+ - 133 :  : klass_index=124 name_and_type_index=134
+ - 134 :  : name_index=135 signature_index=122
+ - 135 :  : 'hashCode'
+ - 136 :  : "LastTradePriceOnly" {0xac4a3bc8}
+ - 137 :  : 'LastTradePriceOnly'
+ - 138 :  : klass_index=124 name_and_type_index=139
+ - 139 :  : name_index=140 signature_index=141
+ - 140 :  : 'equals'
+ - 141 :  : '(Ljava/lang/Object;)Z'
+ - 142 :  : "Change" {0xac4a3360}
+ - 143 :  : 'Change'
+ - 144 :  : klass_index=145 name_and_type_index=147
+ - 145 :  : 'java/lang/Double'
+ - 146 :  : 'java/lang/Double'
+ - 147 :  : name_index=148 signature_index=149
+ - 148 :  : 'parseDouble'
+ - 149 :  : '(Ljava/lang/String;)D'
+ - 150 :  : klass_index=145 name_and_type_index=151
+ - 151 :  : name_index=152 signature_index=153
+ - 152 :  : 'valueOf'
+ - 153 :  : '(D)Ljava/lang/Double;'
+ - 154 :  : 'com/ostendotech/stockwatcher/client/StockPrice'
+ - 155 :  : 'com/ostendotech/stockwatcher/client/StockPrice'
+ - 156 :  : klass_index=145 name_and_type_index=157
+ - 157 :  : name_index=158 signature_index=159
+ - 158 :  : 'doubleValue'
+ - 159 :  : '()D'
+ - 160 :  : klass_index=154 name_and_type_index=161
+ - 161 :  : name_index=10 signature_index=162
+ - 162 :  : '(Ljava/lang/String;DD)V'
+ - 163 :  : klass_index=41 name_and_type_index=164
+ - 164 :  : name_index=165 signature_index=45
+ - 165 :  : 'err'
+ - 166 :  : "Cafe con Leche is malformed today. How embarrassing!" {0xac7cde80}
+ - 167 :  : 'Cafe con Leche is malformed today. How embarrassing!'
+ - 168 :  : "Could not connect to Cafe con Leche. The site may be down." {0xac7cdf10}
+ - 169 :  : 'Could not connect to Cafe con Leche. The site may be down.'
+ - 170 :  : 'nu/xom/ParsingException'
+ - 171 :  : 'nu/xom/ParsingException'
+ - 172 :  : 'java/io/IOException'
+ - 173 :  : 'java/io/IOException'
+ - 174 :  : 'xml'
+ - 175 :  : 'parser'
+ - 176 :  : 'Lnu/xom/Builder;'
+ - 177 :  : 'doc'
+ - 178 :  : 'Lnu/xom/Document;'
+ - 179 :  : 'root'
+ - 180 :  : 'Lnu/xom/Element;'
+ - 181 :  : 'query'
+ - 182 :  : 'Lnu/xom/Elements;'
+ - 183 :  : 'results'
+ - 184 :  : 'quoteSymbol'
+ - 185 :  : 'count'
+ - 186 :  : 'I'
+ - 187 :  : 'price'
+ - 188 :  : 'Ljava/lang/Double;'
+ - 189 :  : 'change'
+ - 190 :  : 'i'
+ - 191 :  : 'quoteVar'
+ - 192 :  : 'Lnu/xom/Node;'
+ - 193 :  : 'str'
+ - 194 :  : 'ex'
+ - 195 :  : 'Lnu/xom/ParsingException;'
+ - 196 :  : 'Ljava/io/IOException;'
+ - 197 :  : 'StackMapTable'
+ - 198 :  : 'nu/xom/Node'
+ - 199 :  : 'nu/xom/Node'
+ - 200 :  : 'java/net/URL'
+ - 201 :  : 'java/net/URL'
+ - 202 :  : klass_index=200 name_and_type_index=31
+ - 203 :  : klass_index=200 name_and_type_index=204
+ - 204 :  : name_index=205 signature_index=206
+ - 205 :  : 'openConnection'
+ - 206 :  : '()Ljava/net/URLConnection;'
+ - 207 :  : 'java/net/HttpURLConnection'
+ - 208 :  : 'java/net/HttpURLConnection'
+ - 209 :  : "GET" {0xab6797d0}
+ - 210 :  : 'GET'
+ - 211 :  : klass_index=207 name_and_type_index=212
+ - 212 :  : name_index=213 signature_index=32
+ - 213 :  : 'setRequestMethod'
+ - 214 :  : "User-Agent" {0xac28fbb0}
+ - 215 :  : 'User-Agent'
+ - 216 :  : klass_index=207 name_and_type_index=217
+ - 217 :  : name_index=218 signature_index=219
+ - 218 :  : 'setRequestProperty'
+ - 219 :  : '(Ljava/lang/String;Ljava/lang/String;)V'
+ - 220 :  : klass_index=207 name_and_type_index=221
+ - 221 :  : name_index=222 signature_index=122
+ - 222 :  : 'getResponseCode'
+ - 223 :  : "
+Sending 'GET' request to URL : " {0xac7cdfb0}
+ - 224 :  : '
+Sending 'GET' request to URL : '
+ - 225 :  : "Response Code : " {0xac7ce018}
+ - 226 :  : 'Response Code : '
+ - 227 :  : klass_index=80 name_and_type_index=228
+ - 228 :  : name_index=93 signature_index=229
+ - 229 :  : '(I)Ljava/lang/StringBuilder;'
+ - 230 :  : 'java/io/BufferedReader'
+ - 231 :  : 'java/io/BufferedReader'
+ - 232 :  : 'java/io/InputStreamReader'
+ - 233 :  : 'java/io/InputStreamReader'
+ - 234 :  : klass_index=207 name_and_type_index=235
+ - 235 :  : name_index=236 signature_index=237
+ - 236 :  : 'getInputStream'
+ - 237 :  : '()Ljava/io/InputStream;'
+ - 238 :  : klass_index=232 name_and_type_index=239
+ - 239 :  : name_index=10 signature_index=240
+ - 240 :  : '(Ljava/io/InputStream;)V'
+ - 241 :  : klass_index=230 name_and_type_index=242
+ - 242 :  : name_index=10 signature_index=243
+ - 243 :  : '(Ljava/io/Reader;)V'
+ - 244 :  : 'java/lang/StringBuffer'
+ - 245 :  : 'java/lang/StringBuffer'
+ - 246 :  : klass_index=244 name_and_type_index=14
+ - 247 :  : klass_index=244 name_and_type_index=248
+ - 248 :  : name_index=93 signature_index=249
+ - 249 :  : '(Ljava/lang/String;)Ljava/lang/StringBuffer;'
+ - 250 :  : klass_index=230 name_and_type_index=251
+ - 251 :  : name_index=252 signature_index=90
+ - 252 :  : 'readLine'
+ - 253 :  : klass_index=230 name_and_type_index=254
+ - 254 :  : name_index=255 signature_index=11
+ - 255 :  : 'close'
+ - 256 :  : klass_index=244 name_and_type_index=96
+ - 257 :  : 'obj'
+ - 258 :  : 'Ljava/net/URL;'
+ - 259 :  : 'con'
+ - 260 :  : 'Ljava/net/HttpURLConnection;'
+ - 261 :  : 'responseCode'
+ - 262 :  : 'in'
+ - 263 :  : 'Ljava/io/BufferedReader;'
+ - 264 :  : 'inputLine'
+ - 265 :  : 'response'
+ - 266 :  : 'Ljava/lang/StringBuffer;'
+ - 267 :  : 'sendPost'
+ - 268 :  : 'javax/net/ssl/HttpsURLConnection'
+ - 269 :  : 'javax/net/ssl/HttpsURLConnection'
+ - 270 :  : "POST" {0xab679800}
+ - 271 :  : 'POST'
+ - 272 :  : klass_index=268 name_and_type_index=212
+ - 273 :  : klass_index=268 name_and_type_index=217
+ - 274 :  : "Accept-Language" {0xac7ce060}
+ - 275 :  : 'Accept-Language'
+ - 276 :  : "en-US,en;q=0.5" {0xac7ce0a8}
+ - 277 :  : 'en-US,en;q=0.5'
+ - 278 :  : "sn=C02G8416DRJM&cn=&locale=&caller=&num=12345" {0xac7ce0f0}
+ - 279 :  : 'sn=C02G8416DRJM&cn=&locale=&caller=&num=12345'
+ - 280 :  : klass_index=268 name_and_type_index=281
+ - 281 :  : name_index=282 signature_index=283
+ - 282 :  : 'setDoOutput'
+ - 283 :  : '(Z)V'
+ - 284 :  : 'java/io/DataOutputStream'
+ - 285 :  : 'java/io/DataOutputStream'
+ - 286 :  : klass_index=268 name_and_type_index=287
+ - 287 :  : name_index=288 signature_index=289
+ - 288 :  : 'getOutputStream'
+ - 289 :  : '()Ljava/io/OutputStream;'
+ - 290 :  : klass_index=284 name_and_type_index=291
+ - 291 :  : name_index=10 signature_index=292
+ - 292 :  : '(Ljava/io/OutputStream;)V'
+ - 293 :  : klass_index=284 name_and_type_index=294
+ - 294 :  : name_index=295 signature_index=32
+ - 295 :  : 'writeBytes'
+ - 296 :  : klass_index=284 name_and_type_index=297
+ - 297 :  : name_index=298 signature_index=11
+ - 298 :  : 'flush'
+ - 299 :  : klass_index=284 name_and_type_index=254
+ - 300 :  : klass_index=268 name_and_type_index=221
+ - 301 :  : "
+Sending 'POST' request to URL : " {0xac7ce178}
+ - 302 :  : '
+Sending 'POST' request to URL : '
+ - 303 :  : "Post parameters : " {0xac7ce1e8}
+ - 304 :  : 'Post parameters : '
+ - 305 :  : klass_index=268 name_and_type_index=235
+ - 306 :  : 'Ljavax/net/ssl/HttpsURLConnection;'
+ - 307 :  : 'urlParameters'
+ - 308 :  : 'wr'
+ - 309 :  : 'Ljava/io/DataOutputStream;'
+ - 310 :  : 'SourceFile'
+ - 311 :  : 'HttpURL.java'
+ - 312 :  : 'getValue'
+ - 313 :  : name_index=312 signature_index=90
+ - 314 :  : klass_index=198 name_and_type_index=313
+ - 315 :  : "query" {0xab73f340}
+ - 316 :  : "results" {0xac49e200}
+ - 317 :  : "quote" {0xac49e2c0}
+ - 318 :  : "symbol" {0xac49e330}
+ - 319 :  : "LastTradePriceOnly" {0xac4a3bc8}
+ - 320 :  : "Change" {0xac4a3360}
+
+R11=0x0000000064931898 is an unknown value
+R12=0x0000000000000000 is an unknown value
+R13=0x000000000f7c3001 is an unknown value
+R14=0x0000000000000000 is an unknown value
+R15=0x6666666666666667 is an unknown value
+
+
+Stack: [0x00000000108a0000,0x00000000109a0000],  sp=0x000000001099ed70,  free space=1019k
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+V  [jvm.dll+0x1eb7c6]
+
+[error occurred during error reporting (printing native stack), id 0xc0000005]
+
+VM_Operation (0x00000000117af2b0): GetOrSetLocal, mode: safepoint, requested by thread 0x000000000f835800
+
+
+---------------  P R O C E S S  ---------------
+
+Java Threads: ( => current thread )
+  0x00000000117c9800 JavaThread "Service Thread" daemon [_thread_blocked, id=5092, stack(0x0000000011ff0000,0x00000000120f0000)]
+  0x00000000117c8000 JavaThread "C2 CompilerThread1" daemon [_thread_blocked, id=8652, stack(0x0000000011bf0000,0x0000000011cf0000)]
+  0x00000000117bb800 JavaThread "C2 CompilerThread0" daemon [_thread_blocked, id=9796, stack(0x0000000011ee0000,0x0000000011fe0000)]
+  0x000000000f83e000 JavaThread "JDWP Command Reader" daemon [_thread_in_native, id=5824, stack(0x0000000011d70000,0x0000000011e70000)]
+  0x000000000f83b000 JavaThread "JDWP Event Helper Thread" daemon [_thread_blocked, id=3936, stack(0x0000000011590000,0x0000000011690000)]
+  0x000000000f835800 JavaThread "JDWP Transport Listener: dt_socket" daemon [_thread_blocked, id=9436, stack(0x00000000116b0000,0x00000000117b0000)]
+  0x000000000f826000 JavaThread "Attach Listener" daemon [_thread_blocked, id=9520, stack(0x0000000010ba0000,0x0000000010ca0000)]
+  0x000000000f81f000 JavaThread "Signal Dispatcher" daemon [_thread_blocked, id=7948, stack(0x0000000010dd0000,0x0000000010ed0000)]
+  0x000000000f7cd000 JavaThread "Finalizer" daemon [_thread_blocked, id=1696, stack(0x0000000010cc0000,0x0000000010dc0000)]
+  0x000000000f7c6000 JavaThread "Reference Handler" daemon [_thread_blocked, id=7132, stack(0x0000000010a90000,0x0000000010b90000)]
+  0x00000000023da000 JavaThread "main" [_thread_blocked, id=7944, stack(0x0000000002710000,0x0000000002810000)]
+
+Other Threads:
+=>0x000000000f7c3000 VMThread [stack: 0x00000000108a0000,0x00000000109a0000] [id=5240]
+  0x00000000117bc800 WatcherThread [stack: 0x0000000012250000,0x0000000012350000] [id=9688]
+
+VM state:at safepoint (normal execution)
+
+VM Mutex/Monitor currently owned by a thread:  ([mutex/lock_event])
+[0x00000000023d8800] Threads_lock - owner thread: 0x000000000f7c3000
+
+Heap
+ PSYoungGen      total 76800K, used 26424K [0x00000007aae00000, 0x00000007b0380000, 0x0000000800000000)
+  eden space 66048K, 40% used [0x00000007aae00000,0x00000007ac7ce238,0x00000007aee80000)
+  from space 10752K, 0% used [0x00000007af900000,0x00000007af900000,0x00000007b0380000)
+  to   space 10752K, 0% used [0x00000007aee80000,0x00000007aee80000,0x00000007af900000)
+ ParOldGen       total 174080K, used 0K [0x0000000700a00000, 0x000000070b400000, 0x00000007aae00000)
+  object space 174080K, 0% used [0x0000000700a00000,0x0000000700a00000,0x000000070b400000)
+ PSPermGen       total 21504K, used 8582K [0x00000006fb800000, 0x00000006fcd00000, 0x0000000700a00000)
+  object space 21504K, 39% used [0x00000006fb800000,0x00000006fc061b90,0x00000006fcd00000)
+
+Card table byte_map: [0x0000000005810000,0x0000000006040000] byte_map_base: 0x0000000002034000
+
+Polling page: 0x0000000000340000
+
+Code Cache  [0x0000000002810000, 0x0000000002a80000, 0x0000000005810000)
+ total_blobs=363 nmethods=93 adapters=230 free_code_cache=48453Kb largest_free_block=49594624
+
+Compilation events (10 events):
+Event: 0.923 Thread 0x00000000117bb800 nmethod 89 0x000000000288e590 code [0x000000000288e6c0, 0x000000000288e6f8]
+Event: 0.926 Thread 0x00000000117c8000 nmethod 88 0x00000000028ada90 code [0x00000000028adc20, 0x00000000028ae290]
+Event: 1.384 Thread 0x00000000117bb800   90             java.lang.String::getChars (62 bytes)
+Event: 1.386 Thread 0x00000000117bb800 nmethod 90 0x00000000028a7e10 code [0x00000000028a7f60, 0x00000000028a8198]
+Event: 1.392 Thread 0x00000000117c8000   91             java.util.Arrays::fill (28 bytes)
+Event: 1.394 Thread 0x00000000117c8000 nmethod 91 0x00000000028c25d0 code [0x00000000028c2720, 0x00000000028c2878]
+Event: 69.598 Thread 0x00000000117bb800   92             sun.security.util.ObjectIdentifier::pack (219 bytes)
+Event: 69.599 Thread 0x00000000117c8000   93             java.util.HashMap::get (29 bytes)
+Event: 69.604 Thread 0x00000000117c8000 nmethod 93 0x00000000028a7790 code [0x00000000028a7900, 0x00000000028a7b68]
+Event: 69.608 Thread 0x00000000117bb800 nmethod 92 0x00000000028b3810 code [0x00000000028b3960, 0x00000000028b3ed8]
+
+GC Heap History (0 events):
+No events
+
+Deoptimization events (10 events):
+Event: 0.921 Thread 0x00000000023da000 Uncommon trap: reason=class_check action=maybe_recompile pc=0x00000000028a65a4 method=sun.security.provider.DigestBase.engineUpdate([BII)V @ 128
+Event: 0.924 Thread 0x00000000023da000 Uncommon trap: reason=unhandled action=none pc=0x00000000028b1fb4 method=sun.misc.BASE64Decoder.decodeAtom(Ljava/io/PushbackInputStream;Ljava/io/OutputStream;I)V @ 46
+Event: 0.927 Thread 0x00000000023da000 Uncommon trap: reason=unhandled action=none pc=0x00000000028b1fb4 method=sun.misc.BASE64Decoder.decodeAtom(Ljava/io/PushbackInputStream;Ljava/io/OutputStream;I)V @ 46
+Event: 0.928 Thread 0x00000000023da000 Uncommon trap: reason=unhandled action=none pc=0x00000000028b1fb4 method=sun.misc.BASE64Decoder.decodeAtom(Ljava/io/PushbackInputStream;Ljava/io/OutputStream;I)V @ 46
+Event: 0.929 Thread 0x00000000023da000 Uncommon trap: reason=unhandled action=none pc=0x00000000028b1fb4 method=sun.misc.BASE64Decoder.decodeAtom(Ljava/io/PushbackInputStream;Ljava/io/OutputStream;I)V @ 46
+Event: 0.929 Thread 0x00000000023da000 Uncommon trap: reason=unhandled action=none pc=0x00000000028b1fb4 method=sun.misc.BASE64Decoder.decodeAtom(Ljava/io/PushbackInputStream;Ljava/io/OutputStream;I)V @ 46
+Event: 0.931 Thread 0x00000000023da000 Uncommon trap: reason=unhandled action=none pc=0x00000000028b1fb4 method=sun.misc.BASE64Decoder.decodeAtom(Ljava/io/PushbackInputStream;Ljava/io/OutputStream;I)V @ 46
+Event: 0.932 Thread 0x00000000023da000 Uncommon trap: reason=unhandled action=none pc=0x00000000028b1fb4 method=sun.misc.BASE64Decoder.decodeAtom(Ljava/io/PushbackInputStream;Ljava/io/OutputStream;I)V @ 46
+Event: 0.933 Thread 0x00000000023da000 Uncommon trap: reason=unhandled action=none pc=0x00000000028b1fb4 method=sun.misc.BASE64Decoder.decodeAtom(Ljava/io/PushbackInputStream;Ljava/io/OutputStream;I)V @ 46
+Event: 0.934 Thread 0x00000000023da000 Uncommon trap: reason=unhandled action=none pc=0x00000000028b1fb4 method=sun.misc.BASE64Decoder.decodeAtom(Ljava/io/PushbackInputStream;Ljava/io/OutputStream;I)V @ 46
+
+Internal exceptions (10 events):
+Event: 1.382 Thread 0x00000000023da000 Threw 0x00000007ac437488 at C:\re\jdk7u60\1081\hotspot\src\share\vm\prims\jvm.cpp:1244
+Event: 1.384 Thread 0x00000000023da000 Threw 0x00000007ac43ce30 at C:\re\jdk7u60\1081\hotspot\src\share\vm\prims\jvm.cpp:1244
+Event: 1.386 Thread 0x00000000023da000 Threw 0x00000007ac459988 at C:\re\jdk7u60\1081\hotspot\src\share\vm\prims\jvm.cpp:1244
+Event: 1.387 Thread 0x00000000023da000 Threw 0x00000007ac45eab0 at C:\re\jdk7u60\1081\hotspot\src\share\vm\prims\jvm.cpp:1244
+Event: 1.389 Thread 0x00000000023da000 Threw 0x00000007ac464bf8 at C:\re\jdk7u60\1081\hotspot\src\share\vm\prims\jvm.cpp:1244
+Event: 1.394 Thread 0x00000000023da000 Threw 0x00000007ac482330 at C:\re\jdk7u60\1081\hotspot\src\share\vm\prims\jvm.cpp:1244
+Event: 1.396 Thread 0x00000000023da000 Threw 0x00000007ac491f00 at C:\re\jdk7u60\1081\hotspot\src\share\vm\prims\jvm.cpp:1244
+Event: 1.397 Thread 0x00000000023da000 Threw 0x00000007ac498800 at C:\re\jdk7u60\1081\hotspot\src\share\vm\prims\jvm.cpp:1244
+Event: 1.399 Thread 0x00000000023da000 Threw 0x00000007ac49e8e0 at C:\re\jdk7u60\1081\hotspot\src\share\vm\prims\jvm.cpp:1244
+Event: 1.442 Thread 0x00000000023da000 Threw 0x00000007ac4a5678 at C:\re\jdk7u60\1081\hotspot\src\share\vm\prims\jvm.cpp:1244
+
+Events (10 events):
+Event: 1096.280 Executing VM operation: ChangeBreakpoints done
+Event: 1096.280 Executing VM operation: EnterInterpOnlyMode
+Event: 1096.280 Executing VM operation: EnterInterpOnlyMode done
+Event: 1096.280 Executing VM operation: GetCurrentLocation
+Event: 1096.280 Executing VM operation: GetCurrentLocation done
+Event: 1096.280 Executing VM operation: ChangeSingleStep
+Event: 1096.280 Executing VM operation: ChangeSingleStep done
+Event: 1096.281 Executing VM operation: ChangeSingleStep
+Event: 1096.281 Executing VM operation: ChangeSingleStep done
+Event: 1096.407 Executing VM operation: GetOrSetLocal
+
+
+Dynamic libraries:
+0x000000013f850000 - 0x000000013f883000 	C:\Program Files\Java\jdk1.7.0_60\bin\javaw.exe
+0x0000000077180000 - 0x0000000077329000 	C:\Windows\SYSTEM32\ntdll.dll
+0x0000000076f40000 - 0x000000007705f000 	C:\Windows\system32\kernel32.dll
+0x000007fefd260000 - 0x000007fefd2cc000 	C:\Windows\system32\KERNELBASE.dll
+0x0000000074d10000 - 0x0000000074d99000 	C:\Windows\System32\SYSFER.DLL
+0x000007fefe5f0000 - 0x000007fefe6cb000 	C:\Windows\system32\ADVAPI32.dll
+0x000007fefd6c0000 - 0x000007fefd75f000 	C:\Windows\system32\msvcrt.dll
+0x000007fefe200000 - 0x000007fefe21f000 	C:\Windows\SYSTEM32\sechost.dll
+0x000007fefda20000 - 0x000007fefdb4d000 	C:\Windows\system32\RPCRT4.dll
+0x0000000077080000 - 0x000000007717a000 	C:\Windows\system32\USER32.dll
+0x000007fefde20000 - 0x000007fefde87000 	C:\Windows\system32\GDI32.dll
+0x000007fefe1f0000 - 0x000007fefe1fe000 	C:\Windows\system32\LPK.dll
+0x000007fefde90000 - 0x000007fefdf59000 	C:\Windows\system32\USP10.dll
+0x000007fefb9d0000 - 0x000007fefbbc4000 	C:\Windows\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.7601.17514_none_fa396087175ac9ac\COMCTL32.dll
+0x000007fefe2c0000 - 0x000007fefe331000 	C:\Windows\system32\SHLWAPI.dll
+0x000007fefe6d0000 - 0x000007fefe6fe000 	C:\Windows\system32\IMM32.DLL
+0x000007fefd760000 - 0x000007fefd869000 	C:\Windows\system32\MSCTF.dll
+0x0000000066400000 - 0x00000000664d2000 	C:\Program Files\Java\jdk1.7.0_60\jre\bin\msvcr100.dll
+0x00000000643b0000 - 0x0000000064b82000 	C:\Program Files\Java\jdk1.7.0_60\jre\bin\server\jvm.dll
+0x000007fef8af0000 - 0x000007fef8af9000 	C:\Windows\system32\WSOCK32.dll
+0x000007fefd9d0000 - 0x000007fefda1d000 	C:\Windows\system32\WS2_32.dll
+0x000007fefd650000 - 0x000007fefd658000 	C:\Windows\system32\NSI.dll
+0x000007fefb1d0000 - 0x000007fefb20b000 	C:\Windows\system32\WINMM.dll
+0x0000000077340000 - 0x0000000077347000 	C:\Windows\system32\PSAPI.DLL
+0x000000006d1b0000 - 0x000000006d1bf000 	C:\Program Files\Java\jdk1.7.0_60\jre\bin\verify.dll
+0x00000000665f0000 - 0x0000000066618000 	C:\Program Files\Java\jdk1.7.0_60\jre\bin\java.dll
+0x00000000664e0000 - 0x0000000066515000 	C:\Program Files\Java\jdk1.7.0_60\jre\bin\jdwp.dll
+0x000000006d230000 - 0x000000006d238000 	C:\Program Files\Java\jdk1.7.0_60\jre\bin\npt.dll
+0x000000006d190000 - 0x000000006d1a5000 	C:\Program Files\Java\jdk1.7.0_60\jre\bin\zip.dll
+0x000000006d1c0000 - 0x000000006d1c9000 	C:\Program Files\Java\jdk1.7.0_60\jre\bin\dt_socket.dll
+0x000007fefb1b0000 - 0x000007fefb1c5000 	C:\Windows\system32\NLAapi.dll
+0x000007fef8e20000 - 0x000007fef8e35000 	C:\Windows\system32\napinsp.dll
+0x000007fef8e50000 - 0x000007fef8e69000 	C:\Windows\system32\pnrpnsp.dll
+0x000007fefc7d0000 - 0x000007fefc825000 	C:\Windows\System32\mswsock.dll
+0x000007fefc650000 - 0x000007fefc6ab000 	C:\Windows\system32\DNSAPI.dll
+0x000007fef8e10000 - 0x000007fef8e1b000 	C:\Windows\System32\winrnr.dll
+0x000007fef9b50000 - 0x000007fef9b77000 	C:\Windows\system32\IPHLPAPI.DLL
+0x000007fef9b40000 - 0x000007fef9b4b000 	C:\Windows\system32\WINNSI.DLL
+0x000007fef98d0000 - 0x000007fef9923000 	C:\Windows\System32\fwpuclnt.dll
+0x000007fef97b0000 - 0x000007fef97b8000 	C:\Windows\system32\rasadhlp.dll
+0x000007fefc160000 - 0x000007fefc167000 	C:\Windows\System32\wshtcpip.dll
+0x00000000665c0000 - 0x00000000665e4000 	C:\Program Files\Java\jdk1.7.0_60\jre\bin\sunec.dll
+0x000000006d240000 - 0x000000006d24b000 	C:\Program Files\Java\jdk1.7.0_60\jre\bin\sunmscapi.dll
+0x000007fefd020000 - 0x000007fefd18a000 	C:\Windows\system32\CRYPT32.dll
+0x000007fefd000000 - 0x000007fefd00f000 	C:\Windows\system32\MSASN1.dll
+0x000007fefc830000 - 0x000007fefc847000 	C:\Windows\system32\CRYPTSP.dll
+0x000007fefc530000 - 0x000007fefc577000 	C:\Windows\system32\rsaenh.dll
+0x000007fefc2a0000 - 0x000007fefc2be000 	C:\Windows\system32\USERENV.dll
+0x000007fefcf60000 - 0x000007fefcf6f000 	C:\Windows\system32\profapi.dll
+0x000007fefce30000 - 0x000007fefce3f000 	C:\Windows\system32\CRYPTBASE.dll
+0x00000000663b0000 - 0x00000000663c9000 	C:\Program Files\Java\jdk1.7.0_60\jre\bin\net.dll
+0x000007fefc7c0000 - 0x000007fefc7c7000 	C:\Windows\System32\wship6.dll
+0x000007fef9770000 - 0x000007fef9781000 	C:\Windows\system32\dhcpcsvc6.DLL
+0x000007fef9a60000 - 0x000007fef9a78000 	C:\Windows\system32\dhcpcsvc.DLL
+0x0000000066390000 - 0x00000000663a1000 	C:\Program Files\Java\jdk1.7.0_60\jre\bin\nio.dll
+0x000007fefa630000 - 0x000007fefa755000 	C:\Windows\system32\dbghelp.dll
+
+VM Arguments:
+jvm_args: -agentlib:jdwp=transport=dt_socket,suspend=y,address=localhost:62719 -Dfile.encoding=Cp1252 
+java_command: com.ostendotech.stockwatcher.server.HttpURL
+Launcher Type: SUN_STANDARD
+
+Environment Variables:
+JAVA_HOME=C:\Program Files\Java\jdk1.7.0_60
+PATH=C:\Program Files\Java\jdk1.7.0_60\jre\bin;C:/Program Files/Java/jdk1.8.0_40/bin/../jre/bin/server;C:/Program Files/Java/jdk1.8.0_40/bin/../jre/bin;C:/Program Files/Java/jdk1.8.0_40/bin/../jre/lib/amd64;C:\ProgramData\Oracle\Java\javapath;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v5.5\bin;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v5.5\libnvvp;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Perl64\site\bin;C:\Perl64\bin;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;c:\Program Files (x86)\Microsoft SQL Server\100\Tools\Binn\;c:\Program Files\Microsoft SQL Server\100\Tools\Binn\;c:\Program Files\Microsoft SQL Server\100\DTS\Binn\;C:\Program Files (x86)\CVSNT\;C:\Users\ktrinh\Documents\OstendoSW\ThirdParty.khai\wx\2.9.4-x86\lib\vc100_dll;C:\Users\ktrinh\AppData\Local\Android\sdk\tools;C:\Users\ktrinh\AppData\Local\Android\sdk\platform-tools;c:\cygwin\bin;c:\cigwin\usr\local\bin;C:\Users\ktrinh\Desktop\CUDA\CudaByExampleSrc\bin;C:\Program Files\Java\jdk1.8.0_40\bin;C:\Development\Console2;C:\Development\AndroidStudio\ndk;C:\Development\eclipseMars;
+USERNAME=ktrinh
+OS=Windows_NT
+PROCESSOR_IDENTIFIER=Intel64 Family 6 Model 42 Stepping 7, GenuineIntel
+
+
+
+---------------  S Y S T E M  ---------------
+
+OS: Windows 7 , 64 bit Build 7601 Service Pack 1
+
+CPU:total 4 (4 cores per cpu, 1 threads per core) family 6 model 42 stepping 7, cmov, cx8, fxsr, mmx, sse, sse2, sse3, ssse3, sse4.1, sse4.2, popcnt, avx, aes, tsc, tscinvbit
+
+Memory: 4k page, physical 16733236k(6075960k free), swap 33464620k(20931948k free)
+
+vm_info: Java HotSpot(TM) 64-Bit Server VM (24.60-b09) for windows-amd64 JRE (1.7.0_60-b19), built on May  7 2014 12:55:18 by "java_re" with unknown MS VC++:1600
+
+time: Mon Nov 09 15:32:21 2015
+elapsed time: 1096 seconds
+

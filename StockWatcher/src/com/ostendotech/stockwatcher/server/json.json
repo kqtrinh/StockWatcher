@@ -1,0 +1,71 @@
+{
+	"title":"Free Music Archive - Genres",
+	"message":"",
+	"errors":[
+		
+	],
+	"total":"163",
+	"total_pages":82,
+	"page":1,
+	"limit":"2",
+	"dataset":[
+		{
+			"genre_id":"1",
+			"genre_parent_id":"38",
+			"genre_title":"Avant-Garde",
+			"genre_handle":"Avant-Garde",
+			"genre_color":"#006666"
+		},
+		{
+			"genre_id":"2",
+			"genre_parent_id":null,
+			"genre_title":"International",
+			"genre_handle":"International",
+			"genre_color":"#CC3300"
+		}
+		
+	]
+}
+{
+	"query":{
+		"results":{
+			"quote":[
+				{
+					"MarketCapitalization":"429.47B",
+					"YearLow":"39.720",
+					"symbol":"msft",
+					"Change":"+0.925",
+					"Volume":"32159213",
+					"LastTradePriceOnly":"53.765",
+					"DaysHigh":"53.890",
+					"DaysRange":"52.850 - 53.890",
+					"AverageDailyVolume":"37414200",
+					"Name":"Microsoft Corporation",
+					"YearHigh":"54.980",
+					"StockExchange":"NMS",
+					"Symbol":"msft",
+					"DaysLow":"52.850"
+				},
+				{
+					"MarketCapitalization":"650.10M",
+					"YearLow":"16.77",
+					"symbol":"intl",
+					"Change":"+0.57",
+					"Volume":"77936",
+					"LastTradePriceOnly":"34.18",
+					"DaysHigh":"34.22",
+					"DaysRange":"33.10 - 34.22",
+					"AverageDailyVolume":"144335",
+					"Name":"INTL FCStone Inc.",
+					"YearHigh":"37.74",
+					"StockExchange":"NMS",
+					"Symbol":"intl",
+					"DaysLow":"33.10"
+				}
+			]
+		},
+		"count":2,
+		"created":"2015-11-16T23:39:30Z",
+		"lang":"en-US"
+	}
+}

@@ -1,0 +1,6 @@
+My AppsStockWatcher
+
+Client ID (Consumer Key)
+    dj0yJmk9eVFPUnI1TU1jYnk0JmQ9WVdrOU5UaHplVVkyTTJNbWNHbzlNQS0tJnM9Y29uc3VtZXJzZWNyZXQmeD1hNA--
+Client Secret (Consumer Secret)
+    7e06c2f64d3a4cf9c327deaf99bec928441cdb81
