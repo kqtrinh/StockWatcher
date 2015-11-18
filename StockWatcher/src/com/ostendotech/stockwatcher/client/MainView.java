@@ -34,23 +34,23 @@ public class MainView extends Composite {
 		String tzID = getTimeZone();
 		if(tzID.equals("-1100")) {	// Hawaii
     		// only query for the stock list quotes within market open time
-			if(hr > 3 && hr <= 10) isRefresh = true;
+			if(hr > 3 && hr < 10) isRefresh = true;
 		}
 		else if(tzID.equals("-0800")) {	// PST
     		// only query for the stock list quotes within market open time
-			if(hr > 6 && hr <= 13) isRefresh = true;
+			if(hr > 6 && hr < 13) isRefresh = true;
 		}
 		else if(tzID.equals("-0700")) {	// MST
     		// only query for the stock list quotes within market open time
-			if(hr > 7 && hr <= 14) isRefresh = true;
+			if(hr > 7 && hr < 14) isRefresh = true;
 		}
 		else if(tzID.equals("-0600")) {	// CST
     		// only query for the stock list quotes within market open time
-			if(hr > 8 && hr <= 15) isRefresh = true;
+			if(hr > 8 && hr < 15) isRefresh = true;
 		}
 		else if(tzID.equals("-0500")) {	// EST
     		// only query for the stock list quotes within market open time
-			if(hr > 9 && hr <= 16) isRefresh = true;
+			if(hr > 9 && hr < 16) isRefresh = true;
 		}
 		return isRefresh;
 	}
