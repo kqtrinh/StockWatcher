@@ -14,6 +14,7 @@ import com.google.gwt.user.client.ui.Button;
 import com.google.gwt.user.client.ui.Composite;
 import com.google.gwt.user.client.ui.FlexTable;
 import com.google.gwt.user.client.ui.HorizontalPanel;
+import com.google.gwt.user.client.ui.Hyperlink;
 import com.google.gwt.user.client.ui.KeyboardListenerAdapter;
 import com.google.gwt.user.client.ui.Label;
 import com.google.gwt.user.client.ui.TextBox;
@@ -96,15 +97,27 @@ public class TickerView extends Composite {
 			stocksFlexTable.setWidget(row, 3, removeStock);			
 		}
 	}
+	@SuppressWarnings("deprecation")
 	private void updateTable(StockPrice stock) {
 		String symbol = stock.getSymbol();
 		// make sure the stock is still in our watch list
 		if (!isStockListContains(symbol)) {
 		    return;
 		}		
-		// this is done here so the ticker symbol is inserted to the stocksFlexTable simultaneously
+		// make the ticker symbol as hyperlink in stocksFlexTable
 		int row = getStockListIndexOf(symbol)+1;
-		stocksFlexTable.setText(row, 0, symbol);
+		//stocksFlexTable.setText(row, 0, symbol);
+		final Hyperlink nameLink = new Hyperlink ();
+		nameLink.setHTML (symbol);
+		nameLink.setTargetHistoryToken ("edit="+new Integer (row));
+		nameLink.addClickHandler(new ClickHandler() {
+			@Override
+			public void onClick(ClickEvent event) {
+				Window.open("http://finance.yahoo.com/q?s=" + nameLink.getText(), "_blank", "");
+			}			
+		});
+		stocksFlexTable.setWidget (row, 0, nameLink);
+		
 		Button removeStock = (Button)stocksFlexTable.getWidget(row, 3);
 		removeStock.setVisible(true);
 
