@@ -7,9 +7,9 @@ import com.google.gwt.user.client.rpc.AsyncCallback;
 import com.google.gwt.user.client.rpc.ServiceDefTarget;
 import com.ostendotech.stockwatcher.client.DelistedException;
 import com.ostendotech.stockwatcher.client.MainView;
-import com.ostendotech.stockwatcher.client.StockPrice;
-import com.ostendotech.stockwatcher.client.StockRequest;
 import com.ostendotech.stockwatcher.client.TickerView;
+import com.ostendotech.stockwatcher.shared.StockPrice;
+import com.ostendotech.stockwatcher.shared.StockRequest;
 
 public class StockPriceServiceClientImpl implements StockPriceServiceClientIntf {
 

@@ -1,14 +1,10 @@
 package com.ostendotech.stockwatcher.client;
 
 import java.util.ArrayList;
-import java.util.Date;
-
 import com.google.gwt.core.client.GWT;
 import com.google.gwt.event.dom.client.ClickEvent;
 import com.google.gwt.event.dom.client.ClickHandler;
-import com.google.gwt.i18n.client.DateTimeFormat;
 import com.google.gwt.i18n.client.NumberFormat;
-import com.google.gwt.i18n.client.DateTimeFormat.PredefinedFormat;
 import com.google.gwt.user.client.Window;
 import com.google.gwt.user.client.ui.Button;
 import com.google.gwt.user.client.ui.Composite;
@@ -20,6 +16,8 @@ import com.google.gwt.user.client.ui.Label;
 import com.google.gwt.user.client.ui.TextBox;
 import com.google.gwt.user.client.ui.Widget;
 import com.ostendotech.stockwatcher.client.service.StockPriceServiceClientImpl;
+import com.ostendotech.stockwatcher.shared.StockPrice;
+import com.ostendotech.stockwatcher.shared.StockRequest;
 
 public class TickerView extends Composite {
 

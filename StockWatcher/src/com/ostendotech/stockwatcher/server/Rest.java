@@ -13,7 +13,7 @@ import org.apache.commons.io.IOUtils;
 import org.json.JSONArray;
 import org.json.JSONObject;
 
-import com.ostendotech.stockwatcher.client.StockPrice;
+import com.ostendotech.stockwatcher.shared.StockPrice;
 
 import nu.xom.Builder;
 import nu.xom.Document;

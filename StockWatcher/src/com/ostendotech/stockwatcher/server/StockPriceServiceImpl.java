@@ -4,9 +4,9 @@ import java.util.ArrayList;
 
 import com.google.gwt.user.server.rpc.RemoteServiceServlet;
 import com.ostendotech.stockwatcher.client.DelistedException;
-import com.ostendotech.stockwatcher.client.StockPrice;
-import com.ostendotech.stockwatcher.client.StockRequest;
 import com.ostendotech.stockwatcher.client.service.StockPriceService;
+import com.ostendotech.stockwatcher.shared.StockPrice;
+import com.ostendotech.stockwatcher.shared.StockRequest;
 
 public class StockPriceServiceImpl extends RemoteServiceServlet implements StockPriceService {
 

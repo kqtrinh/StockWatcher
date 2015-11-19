@@ -1,4 +1,4 @@
-package com.ostendotech.stockwatcher.client;
+package com.ostendotech.stockwatcher.shared;
 
 import com.google.gwt.user.client.rpc.IsSerializable;
 
