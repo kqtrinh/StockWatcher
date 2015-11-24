@@ -19,38 +19,28 @@ public class MainView extends Composite {
 	private Label lastUpdatedLabel = new Label();	
 	//private Label errorMsgLabel = new Label();
 	private long errMsgShowTime = System.currentTimeMillis();
-	
-	/**
-	 * get client's time zone
-	 * @param type
-	 * @return
-	 */
-	private String getTimeZone() {
-        return DateTimeFormat.getFormat("Z").format(new Date()); //like "-0700"
-	}
+	private String tz = null;
+
 	private boolean isMarketOpen() {
 		boolean isRefresh = false;
+		@SuppressWarnings("deprecation")
 		int hr = new Date().getHours();
-		String tzID = getTimeZone();
-		if(tzID.equals("-1100")) {	// Hawaii
-    		// only query for the stock list quotes within market open time
-			if(hr > 3 && hr < 10) isRefresh = true;
+		
+		// only query for the stock list quotes within market open time
+		if(this.tz.equals("-11")) {	// Hawaii    		
+			if(hr >= 3 && hr < 10) isRefresh = true;
 		}
-		else if(tzID.equals("-0800")) {	// PST
-    		// only query for the stock list quotes within market open time
-			if(hr > 6 && hr < 13) isRefresh = true;
+		else if(this.tz.equals("-8")) {	// PST
+			if(hr >= 6 && hr < 13) isRefresh = true;
 		}
-		else if(tzID.equals("-0700")) {	// MST
-    		// only query for the stock list quotes within market open time
-			if(hr > 7 && hr < 14) isRefresh = true;
+		else if(this.tz.equals("-7")) {	// MST
+			if(hr >= 7 && hr < 14) isRefresh = true;
 		}
-		else if(tzID.equals("-0600")) {	// CST
-    		// only query for the stock list quotes within market open time
-			if(hr > 8 && hr < 15) isRefresh = true;
+		else if(this.tz.equals("-6")) {	// CST
+			if(hr >= 8 && hr < 15) isRefresh = true;
 		}
-		else if(tzID.equals("-0500")) {	// EST
-    		// only query for the stock list quotes within market open time
-			if(hr > 9 && hr < 16) isRefresh = true;
+		else if(this.tz.equals("-5")) {	// EST
+			if(hr >= 9 && hr < 16) isRefresh = true;
 		}
 		return isRefresh;
 	}
@@ -58,7 +48,7 @@ public class MainView extends Composite {
 		return this.errMsgShowTime;
 	}
 	public FlexTable getStocksFlexTable() {
-		return stocksFlexTable;
+		return this.stocksFlexTable;
 	}
 	public void setStocksFlexTable(FlexTable stocksFlexTable) {
 		this.stocksFlexTable = stocksFlexTable;
@@ -69,7 +59,10 @@ public class MainView extends Composite {
 		
 		initWidget(this.mainPanel);
 	    
+		//like "-0700" but with replace("0",""), this will remove leading and trailing 0s (ie: -7)
+		this.tz = DateTimeFormat.getFormat("Z").format(new Date()).replace("0", "");
 		this.tickerView = new TickerView(this);
+		
 		// set up stock list table
 		this.stocksFlexTable.setText(0, 0, "Symbol");
 	    this.stocksFlexTable.setText(0, 1, "Price");
@@ -109,6 +102,9 @@ public class MainView extends Composite {
 	    	}
 	    };
 	    refreshTimer.scheduleRepeating(REFRESH_INTERVAL);
+	}
+	public String getTimeZone() {
+        return this.tz;
 	}
 	public Label getLastUpdatedLabel() {
 		return lastUpdatedLabel;

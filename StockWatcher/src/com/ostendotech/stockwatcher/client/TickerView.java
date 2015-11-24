@@ -1,9 +1,12 @@
 package com.ostendotech.stockwatcher.client;
 
 import java.util.ArrayList;
+import java.util.Date;
+
 import com.google.gwt.core.client.GWT;
 import com.google.gwt.event.dom.client.ClickEvent;
 import com.google.gwt.event.dom.client.ClickHandler;
+import com.google.gwt.i18n.client.DateTimeFormat;
 import com.google.gwt.i18n.client.NumberFormat;
 import com.google.gwt.user.client.Window;
 import com.google.gwt.user.client.ui.Button;
@@ -28,6 +31,7 @@ public class TickerView extends Composite {
 	private MainView mainView = null;
 	private FlexTable stocksFlexTable = null; 
 	private Label lastUpdatedLabel = null;
+	private String tz = null;
 	private StockPriceServiceClientImpl stockPriceSvc = null;	
 		
 	private int getStockListIndexOf(String symbol) {
@@ -107,7 +111,7 @@ public class TickerView extends Composite {
 		//stocksFlexTable.setText(row, 0, symbol);
 		final Hyperlink nameLink = new Hyperlink ();
 		nameLink.setHTML (symbol);
-		nameLink.setTargetHistoryToken ("edit="+new Integer (row));
+		nameLink.setTargetHistoryToken ("trigger="+symbol);
 		nameLink.addClickHandler(new ClickHandler() {
 			@Override
 			public void onClick(ClickEvent event) {
@@ -154,6 +158,7 @@ public class TickerView extends Composite {
 		this.mainView = mainView;
 		this.stocksFlexTable = this.mainView.getStocksFlexTable();
 		this.lastUpdatedLabel = this.mainView.getLastUpdatedLabel();
+		this.tz = mainView.getTimeZone();
 		
 		// set up event listeners for adding a new stock
 		this.addButton.addClickHandler(new ClickHandler() {
@@ -196,6 +201,12 @@ public class TickerView extends Composite {
 		    updateTable(prices[i]);
 		}		
 		// change the last update timestamp
-		lastUpdatedLabel.setText("Last update : " + prices[0].getTime());
+		String timestamp = prices[0].getTime().replace("Z", "");
+		int idx = timestamp.indexOf('T');
+		String hr = DateTimeFormat.getFormat( "H" ).format( new Date() );
+
+		StringBuilder time = new StringBuilder(timestamp);
+		time.replace(idx, idx+3, " " + hr);
+		lastUpdatedLabel.setText("Last update : " + time);
 	}
 }

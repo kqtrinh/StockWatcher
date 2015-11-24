@@ -28,6 +28,6 @@
   <source path='client'/>
   <source path='shared'/>
 
-  <!-- allow Super Dev Mode -->
+  <!-- allow Super Dev Mode when use with GWT 2.6 and below -->
   <add-linker name="xsiframe"/>
 </module>

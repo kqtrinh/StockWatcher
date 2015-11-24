@@ -16,6 +16,7 @@ import org.json.JSONTokener;
 import com.ostendotech.stockwatcher.shared.StockPrice;
 import com.ostendotech.stockwatcher.shared.StockRequest;
 
+// Yahoo Query Language Quote Fetcher class
 public class YqlFinanceQuoteFetcher {
 	// https://query.yahooapis.com/v1/public/yql?q=SELECT%20*%20FROM%20yahoo.finance.quote%20WHERE%20symbol%3D%22MSFT%22&env=store%3A%2F%2Fdatatables.org%2Falltableswithkeys
 	// https://query.yahooapis.com/v1/public/yql?q=SELECT%20*%20FROM%20yahoo.finance.quote%20WHERE%20symbol%3D%22msft%2Cyhoo%22&format=json&env=store%3A%2F%2Fdatatables.org%2Falltableswithkeys&callback=
