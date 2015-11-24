@@ -2,16 +2,10 @@ package com.ostendotech.stockwatcher.server;
 
 import nu.xom.*;
 import java.io.IOException;
-import java.io.InputStream;
-import java.net.URI;
-import java.net.URISyntaxException;
 import java.util.ArrayList;
 
-import org.apache.commons.io.IOUtils;
 import org.json.JSONArray;
-import org.json.JSONException;
 import org.json.JSONObject;
-import org.json.JSONTokener;
 
 import com.ostendotech.stockwatcher.shared.StockPrice;
 import com.ostendotech.stockwatcher.shared.StockRequest;
