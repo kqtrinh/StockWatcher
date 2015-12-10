@@ -54,7 +54,6 @@ public class MainView extends Composite {
 		this.stocksFlexTable = stocksFlexTable;
 	}
 
-	@SuppressWarnings("deprecation")
 	public MainView() {
 		
 		initWidget(this.mainPanel);
@@ -80,6 +79,7 @@ public class MainView extends Composite {
 	    this.mainPanel.add(this.lastUpdatedLabel);	
 		this.mainPanel.add(this.tickerView);		
 	    this.mainPanel.add(this.stocksFlexTable);
+	    this.mainPanel.setStyleName("style");
 	    
 		// change the last update timestamp
 		lastUpdatedLabel.setText("Last update : " + 

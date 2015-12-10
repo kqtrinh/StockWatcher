@@ -9,7 +9,8 @@
 			<attribute name="owner.project.facets" value="java"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="war/WEB-INF/lib/xom-1.2.10.jar"/>
-	<classpathentry kind="lib" path="war/WEB-INF/lib/org.json.jar"/>
+	<classpathentry kind="lib" path="I:/git/StockWatcher/lib/xom-1.2.10.jar"/>
+	<classpathentry kind="lib" path="I:/git/StockWatcher/lib/org.json.jar"/>
+	<classpathentry kind="lib" path="C:/Development/tools/mgwt-2.0/mgwt-2.0.0.jar"/>
 	<classpathentry kind="output" path="war/WEB-INF/classes"/>
 </classpath>

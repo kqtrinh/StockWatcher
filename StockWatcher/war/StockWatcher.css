@@ -45,3 +45,8 @@ body, .watchList {
 .errorMessage {
   color: Red;
 }
+
+.style {
+    margin-left: auto;
+    margin-right: auto;
+}

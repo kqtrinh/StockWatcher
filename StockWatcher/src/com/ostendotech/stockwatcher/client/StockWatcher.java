@@ -1,13 +1,24 @@
 package com.ostendotech.stockwatcher.client;
 
 import com.google.gwt.core.client.EntryPoint;
+import com.google.gwt.user.client.Window;
+import com.google.gwt.user.client.Window.Navigator;
 import com.google.gwt.user.client.ui.RootPanel;
 
 public class StockWatcher implements EntryPoint {
 		
 	public void onModuleLoad() {
 	    
-		MainView mainView = new MainView();
+	    String platform = Navigator.getPlatform();
+	    String userAgent = Navigator.getUserAgent();
+	    MainView mainView = new MainView();
+//	    Window.alert(platform);
+//	    Window.alert(userAgent);
+	    
+	    // must be mobile (iOS or Android(Linux) )
+	    if(!platform.equals("Win32")) {
+	    	// we want the 
+	    }
 	    // add the main panel to the HTML element with the id "stockList"
 		RootPanel rootPanel = RootPanel.get("stockList");
 	    rootPanel.add(mainView);
